@@ -6,7 +6,7 @@ def selection_sort(number)
       pushed = false
       temp = number[0]
       number.each { |item| temp = item if temp > item }
-      if temp != nil
+      unless temp == nil
         index = number.find_index(temp)
         arr.push(number.slice!(index))
         pushed = true
