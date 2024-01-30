@@ -5,19 +5,12 @@ def selection_sort(number)
     while pushed == true
       pushed = false
       temp = number[0]
-      number.each do |item|
-        if number.size == 1
-          temp = item
-        elsif temp > item
-          temp = item
-        end
-      end
+      number.each { |item| temp = item if temp > item }
       if temp != nil
         index = number.find_index(temp)
         arr.push(number.slice!(index))
         pushed = true
       end
-  
     end
     arr  
   end
