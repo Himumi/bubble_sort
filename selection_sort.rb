@@ -2,7 +2,7 @@ def selection_sort(number)
     return if number.size <= 1
     arr = []
     pushed = true
-    while pushed == true
+    while pushed
       pushed = false
       temp = number[0]
       number.each { |item| temp = item if temp > item }
